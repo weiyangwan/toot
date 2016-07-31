@@ -1,0 +1,100 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+$headerFont: 'Righteous', cursive;
+$paraFont: 'Roboto', sans-serif;
+
+$primaryColor: #8d5e8d;
+$btnColor: #a57fa5;
+$btnColorHover: #a57fa5;
+
+* {
+  box-sizing: border-box;
+}
+
+h1  {
+  font-family: $headerFont;
+  text-align: center;
+}
+
+/**************
+  Navigation
+***************/
+.navbar {
+  background-color: $primaryColor;
+}
+
+.navbar-brand {
+  font-family: $headerFont;
+  font-size: 2.5em;
+  color: #180b17;
+  &:hover {
+    color: white !important;
+  }
+}
+
+.login-signup {
+  display: inline-block;
+  margin-top: 15px;
+  font-family: $headerFont;
+  font-size: 1.2em;
+  &:hover {
+    text-decoration: none;
+    background-color: transparent;
+  }
+}
+/** When not log in **/
+p.login-signup  {
+  margin: 0 10px;
+}
+
+.loggedin {
+  margin-top: 12px;
+}
+
+.loggedin-nav {
+  display: inline-block;
+}
+
+.small-gravatar img{
+  width: 30%;
+  border-radius: 50%;
+}
+
+/**************
+  Profile Page
+***************/
+.gravatar {
+  border-radius: 25%;
+}
+
+
+
+/**************
+     ALERT
+***************/
+.alert  {
+  margin-top: 80px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.btn  {
+  background-color: $primaryColor;
+  &:hover {
+    background-color: $btnColorHover;
+  }
+}
+
+/**************
+  FOOTER
+***************/
+footer  {
+  border-top: 2px solid $primaryColor;
+}
+
+footer li {
+  display: inline-block;
+}
