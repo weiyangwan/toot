@@ -1,0 +1,10 @@
+users/show
+- username - for username on profile page
+- userposts - for each post in user profile page
+
+
+posts/post
+- post-[:id] - id
+- postuser -> for username of each post
+- content -> the content of each post
+- timestamp -> timestamp of each post
