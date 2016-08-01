@@ -8,11 +8,13 @@
 
 User.create!([
   {
+    username: "weiyang",
     email: "weiyang@toot.com",
     password: "123456",
     password_confirmation: "123456",
   },
   {
+    username: "tootnumber1",
     email: "loyaltoot@toot.com",
     password: "123456",
     password_confirmation: "123456",
