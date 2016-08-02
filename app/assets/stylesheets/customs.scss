@@ -87,7 +87,6 @@ h1,h2  {
   }
 }
 
-
 /**************
   Navigation
 ***************/
@@ -123,7 +122,6 @@ h1,h2  {
 .dropdown-toggle  {
 
 }
-
 
 /**************
      Alert
@@ -191,6 +189,57 @@ textarea  {
 .timestamp  {
   color: lightgray;
   font-size: .8em;
+}
+
+/*************************
+  Follower/Following list
+**************************/
+ul.users  {
+  padding: 0;
+}
+
+.follow-list  {
+  display: inline-block;
+  width: 400px;
+  margin-bottom: 10px;
+  padding: 15px 0 10px 10px;
+  height: 80px;
+  font-size: 1.2em;
+  list-style: none;
+  @include box;
+  p {
+    font-size: 0.8em;
+    color: grey;
+  }
+}
+
+.follow-header {
+  padding: 5px 0;
+  h3  {
+    display: inline-block;
+  }
+  &:first-child {
+    margin-left: 10px;
+  }
+}
+
+.follow-current {
+  margin-right: -6px;
+  padding: 7px 20px;
+  color: white;
+  background-color: $primaryBrandColor;
+  border: 6px solid $primaryBrandColor;
+}
+
+.show-follow-Btn  {
+  padding: 7px 20px;
+  color: $primaryBrandColor;
+  border: 2px solid $primaryBrandColor;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background-color: lighten($primaryBrandColor, 60%);
+  }
 }
 
 /**************

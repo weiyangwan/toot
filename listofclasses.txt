@@ -8,9 +8,15 @@ users/show
 - username - for username on profile page
 - userposts - for each post in user profile page
 
+users/user
+- follow-list
+
 users/show_follow
 - users
 - follow
+- follow-header
+- follow-current
+- show-follow-Btn
 
 users/follow_form
 - follow_form - id
