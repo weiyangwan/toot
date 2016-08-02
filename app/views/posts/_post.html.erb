@@ -1,5 +1,5 @@
 <li id="post-<%= post.id %>">
-  <span class="postuser"><%= link_to post.user.username, post.user %></span>
+  <span class="postuser"><%= link_to post.user.username.upcase, post.user %></span>
   <span class="content"><%= post.content %></span>
   <span class="timestamp">
     Tooted <%= time_ago_in_words(post.created_at) %> ago.

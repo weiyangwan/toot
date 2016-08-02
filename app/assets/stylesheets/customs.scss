@@ -6,12 +6,36 @@
 $headerFont: 'Righteous', cursive;
 $paraFont: 'Roboto', sans-serif;
 
+$navbarColor: white;
 $primaryColor: #d1bed1;
-$btnColor: #a57fa5;
-$btnColorHover: #a57fa5;
-// #8d5e8d
+$btnColor: #8d5e8d;
+
+@mixin box  {
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(211,211,211,1);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(211,211,211,1);
+  box-shadow: 0px 0px 30px 0px rgba(211,211,211,1);
+}
+
+@mixin button {
+  padding: 5px 20px;
+  color: $btnColor;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid $btnColor;
+  &:hover{
+    color: white;
+    background-color: $btnColor;
+    border-color: transparent;
+  }
+}
+
+
 * {
   box-sizing: border-box;
+}
+
+body  {
+  background-color: #f5f5f5;
 }
 
 h1  {
@@ -23,7 +47,9 @@ h1  {
   Navigation
 ***************/
 .navbar {
-  background-color: $primaryColor;
+  height: 60px;
+  margin-bottom: 0;
+  background-color: $navbarColor;
 }
 
 .navbar-brand {
@@ -58,18 +84,6 @@ p.login-signup  {
   display: inline-block;
 }
 
-.small-gravatar img{
-  width: 30%;
-  border-radius: 50%;
-}
-
-/**************
-  Profile Page
-***************/
-.gravatar {
-  border-radius: 25%;
-}
-
 /**************
      ALERT
 ***************/
@@ -79,21 +93,46 @@ p.login-signup  {
   text-align: center;
 }
 
-.btn  {
-  background-color: $primaryColor;
-  &:hover {
-    background-color: $btnColorHover;
-  }
-}
 /******************
  USER PROFILE PAGE
 ******************/
+
+/* new content */
+textarea  {
+  height: 80px;
+  width: 80%;
+  background-color:#f5f5f5;
+  border-color:transparent;
+}
+
+.newContentDiv  {
+  height: 150px;
+  margin-bottom: 20px;
+  @include box;
+  background-color: #c6aec6;
+}
+
+.newContent {
+  margin-top: 20px;
+}
+
+.tootBtn  {
+  float: right;
+  margin-right: 65px;
+  margin-top: 5px;
+  padding: 5px 20px;
+  @include button;
+}
+
+/* posts */
 .userposts  {
   list-style: none;
+  padding: 0;
   li  {
+    min-height: 80px;
     margin-bottom: 10px;
     padding: 5px 15px;
-    border: 1px solid red;
+    @include box;
   }
 }
 
@@ -102,11 +141,14 @@ p.login-signup  {
   display: block;
 }
 
+.content  {
+  margin-bottom: 10px;
+}
+
 .timestamp  {
   color: lightgray;
   font-size: .8em;
 }
-
 
 /**************
   FOOTER

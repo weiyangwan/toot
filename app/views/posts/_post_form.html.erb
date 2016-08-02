@@ -1,6 +1,6 @@
 <%= form_for(@post) do |f| %>
-  <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new post..." %>
+  <div class="field newContentDiv">
+    <%= f.text_area :content, placeholder: "Don't think, just toot it, " + @user.username.upcase, class: "newContent col-md-offset-1 col-md-10"%>
+    <%= f.submit "Toot it", class: "btn btn-primary tootBtn" %>
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>

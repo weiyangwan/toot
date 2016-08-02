@@ -8,3 +8,8 @@ posts/post
 - postuser -> for username of each post
 - content -> the content of each post
 - timestamp -> timestamp of each post
+
+posts/post_form
+- newContentDiv
+- newContent
+- tootBtn
