@@ -15,6 +15,14 @@ users/show_follow
 users/follow_form
 - follow_form - id
 
+users/stats
+- stats
+- stat
+- following - id
+- follower - id
+
+users/feed
+- feedPosts
 
 posts/post
 - post-[:id] - id
@@ -26,9 +34,3 @@ posts/post_form
 - newContentDiv
 - newContent
 - tootBtn
-
-users/stats
-- stats
-- stat
-- following - id
-- follower - id

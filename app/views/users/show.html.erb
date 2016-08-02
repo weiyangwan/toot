@@ -13,9 +13,10 @@
     <%= render "posts/post_form" %>
   </div>
 
+
   <div class="row">
     <% if @user.posts.any? %>
-      <ol class="userposts">
+      <ol class="userPosts">
         <%= render @posts %>
       </ol>
     <% end %>
