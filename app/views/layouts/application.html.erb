@@ -9,17 +9,19 @@
   </head>
 
   <body>
-    
-    <%= render 'partials/navigation' %>
 
-    <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+    <% if user_signed_in? %>
+      <%= render 'partials/navigation' %>
+
+      <div class="container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
 
     <div class="container">
       <%= yield %>
     </div>
-    <%= debug(params) if Rails.env.development? %>
+    <%#= debug(params) if Rails.env.development? %>
   </body>
 </html>

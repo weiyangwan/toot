@@ -1,8 +1,23 @@
-<%# if user_signed_in? %>
-  <%#= render 'users/show' %>
-<%# else %>
+<% if user_signed_in? %>
+  <%= render 'users/show' %>
+<% else %>
 
-  <h1>StaticPages#home</h1>
-  <p>Find me in app/views/static_pages/home.html.erb</p>
+  <div class="home">
 
-<%# end %>
+    <div class="row">
+      <div class="container header col-md-7">
+        <h1 class="homeHeader">Toot is the liveliest community for your travel conversations.</h1>
+        <h2 class="homeSubheader">Some nice sub-header here.</h2>
+      </div>
+
+
+      <div class="container col-md-4">
+        <li><%= link_to "Be a Tooter | Sign Up Now", new_user_registration_path, class: "btn btn-primary homeBtn" %></li>
+        <li><%= link_to "Log In", new_user_session_path, class: "btn btn-primary homeBtn" %></li>
+      </div>
+
+    </div>
+
+  </div>
+
+<% end %>

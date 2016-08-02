@@ -6,9 +6,8 @@
 $headerFont: 'Righteous', cursive;
 $paraFont: 'Roboto', sans-serif;
 
+$primaryBrandColor: #543854;
 $navbarColor: white;
-$primaryColor: #d1bed1;
-$btnColor: #8d5e8d;
 
 @mixin box  {
   -webkit-box-shadow: 0px 0px 30px 0px rgba(211,211,211,1);
@@ -18,17 +17,20 @@ $btnColor: #8d5e8d;
 
 @mixin button {
   padding: 5px 20px;
-  color: $btnColor;
+  color: $primaryBrandColor;
   background-color: white;
   border-radius: 4px;
-  border: 1px solid $btnColor;
+  border: 1px solid $primaryBrandColor;
   &:hover{
     color: white;
-    background-color: $btnColor;
+    background-color: $primaryBrandColor;
     border-color: transparent;
   }
 }
 
+/**************
+  Basic Styles
+***************/
 
 * {
   box-sizing: border-box;
@@ -38,10 +40,51 @@ body  {
   background-color: #f5f5f5;
 }
 
-h1  {
+h1,h2  {
   font-family: $headerFont;
   text-align: center;
 }
+
+/**************
+  Home Page
+***************/
+.home {
+  margin-top: 15%;
+}
+
+.header {
+  // border-right: 4px solid $primaryBrandColor;
+}
+
+.homeHeader {
+  margin: 0;
+  font-size: 3.5em;
+  line-height: 1.2;
+}
+
+.homeSubheader  {
+  color: $primaryBrandColor;
+}
+
+.homeBtn  {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  height: 50px;
+  width: 350px;
+  list-style: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  background-color: $primaryBrandColor;
+  border-radius: 50px;
+  &:hover {
+    color: $primaryBrandColor;
+    background-color: white;
+  }
+}
+
 
 /**************
   Navigation
@@ -52,40 +95,22 @@ h1  {
   background-color: $navbarColor;
 }
 
-.navbar-brand {
+#navbar-brand {
+  margin-top: 5px;
   font-family: $headerFont;
-  font-size: 2.5em;
-  color: #180b17;
+  font-size: 3em;
+  color: $primaryBrandColor;
   &:hover {
-    color: white !important;
+    color: lighten($primaryBrandColor, 20%);;
   }
 }
 
-.login-signup {
-  display: inline-block;
-  margin-top: 15px;
-  font-family: $headerFont;
-  font-size: 1.2em;
-  &:hover {
-    text-decoration: none;
-    background-color: transparent;
-  }
-}
-/** When not log in **/
-p.login-signup  {
-  margin: 0 10px;
-}
-
-.loggedin {
-  margin-top: 12px;
-}
-
-.loggedin-nav {
-  display: inline-block;
+.navbar-default .navbar-nav > li > a {
+  color: $primaryBrandColor;
 }
 
 /**************
-     ALERT
+     Alert
 ***************/
 .alert,
 .notice  {
@@ -95,7 +120,7 @@ p.login-signup  {
 }
 
 /******************
- USER PROFILE PAGE
+ User Profile Page
 ******************/
 
 /* new content */
@@ -152,10 +177,10 @@ textarea  {
 }
 
 /**************
-  FOOTER
+  Footer
 ***************/
 footer  {
-  border-top: 2px solid $primaryColor;
+  border-top: 2px solid $primaryBrandColor;
 }
 
 footer li {
