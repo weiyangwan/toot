@@ -1,3 +1,10 @@
+static/home
+- home
+- homeHeader
+- homeSubheader
+- homeBtn
+
+
 users/show
 - username - for username on profile page
 - userposts - for each post in user profile page
