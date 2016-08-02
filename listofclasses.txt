@@ -20,3 +20,7 @@ posts/post_form
 - newContentDiv
 - newContent
 - tootBtn
+
+partials/stats
+- stats
+- stat

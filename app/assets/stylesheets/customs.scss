@@ -108,8 +108,22 @@ h1,h2  {
 }
 
 .navbar-default .navbar-nav > li > a {
+  min-width: 100px;
+  margin-top: 10px;
+  padding: 5px 25px;
   color: $primaryBrandColor;
+  border-radius: 50px;
+  border: 3px solid $primaryBrandColor;
+  &:hover {
+    color: white;
+    background-color: $primaryBrandColor;
+  }
 }
+
+.dropdown-toggle  {
+
+}
+
 
 /**************
      Alert

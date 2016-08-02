@@ -21,8 +21,25 @@ User.create!([
   },
 ])
 
+50.times do |n|
+  name  = Faker::Name.name
+  email = "tooter-#{n+1}@toot.com"
+  password = "password"
+  User.create!(username: name,
+              email: email,
+              password:              password,
+              password_confirmation: password)
+end
+
 users = User.all
-20.times do
+10.times do
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.posts.create!(content: content)}
 end
+
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }

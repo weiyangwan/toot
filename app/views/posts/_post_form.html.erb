@@ -1,4 +1,4 @@
-<%= form_for @post do |f| %>
+<%= simple_form_for @post do |f| %>
   <div class="field newContentDiv">
     <%= f.text_area :content, placeholder: "Don't think, just toot it, " + @user.username.upcase, class: "newContent col-md-offset-1 col-md-10"%>
     <%= f.submit "Toot it", class: "btn btn-primary tootBtn" %>
