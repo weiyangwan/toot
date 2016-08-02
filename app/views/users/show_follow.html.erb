@@ -1,11 +1,11 @@
 <div class="container col-md-offset-2 col-md-9">
 
   <div class="follow-header">
-    <h3 class="follow-current"><%= @title %></h3>
+    <h5 class="follow-current"><%= @title %></h5>
     <% if @title == "following" %>
-      <h3><%= link_to "followers", followers_user_path(@user), class: "show-follow-Btn" %></h3>
+      <h5><%= link_to "followers", followers_user_path(@user), class: "show-follow-Btn" %></h5>
     <% else %>
-      <h3><%= link_to "following", following_user_path(@user), class: "show-follow-Btn" %></h3>
+      <h5><%= link_to "following", following_user_path(@user), class: "show-follow-Btn" %></h5>
     <% end %>
   </div>
 

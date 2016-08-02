@@ -1,0 +1,16 @@
+<div class="container col-md-2">
+
+  <div class="row">
+    <% unless current_user?(@user) %>
+      <%= link_to "My Profile", user_path(current_user), class: "my-profile" %>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <%= render 'users/stats' %>
+  </div>
+
+  <div class="row">
+    <%= render 'users/follow_form' if user_signed_in? %>
+  </div>
+</div>

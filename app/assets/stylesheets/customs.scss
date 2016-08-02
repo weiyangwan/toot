@@ -1,8 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
 
+$brandFont: 'Fredoka One', cursive;
 $headerFont: 'Righteous', cursive;
 $paraFont: 'Roboto', sans-serif;
 
@@ -98,7 +100,7 @@ h1,h2  {
 
 #navbar-brand {
   margin-top: 5px;
-  font-family: $headerFont;
+  font-family: $brandFont;
   font-size: 3em;
   color: $primaryBrandColor;
   &:hover {
@@ -134,22 +136,36 @@ h1,h2  {
 }
 
 /******************
+ Left nav
+******************/
+.my-profile {
+  display: block;
+  margin: 10px 0;
+  padding: 5px;
+  border-bottom: 1px solid $primaryBrandColor;
+}
+
+.stat  {
+  display:block;
+}
+
+/******************
  User Profile Page
 ******************/
-
 /* new content */
 textarea  {
   height: 80px;
-  width: 80%;
   background-color:#f5f5f5;
   border-color:transparent;
+  border-radius: 0 5px 5px 0;
 }
 
 .newContentDiv  {
-  height: 150px;
+  height: 145px;
   margin-bottom: 20px;
   @include box;
-  background-color: #c6aec6;
+  background-color: #d7c6d7;
+  border-radius: 4px;
 }
 
 .newContent {
@@ -159,9 +175,9 @@ textarea  {
 .tootBtn  {
   float: right;
   margin-right: 65px;
-  margin-top: 5px;
-  padding: 5px 20px;
+  margin-top: 10px;
   @include button;
+  padding: 3px 20px;
 }
 
 /* posts */
@@ -215,7 +231,7 @@ ul.users  {
 
 .follow-header {
   padding: 5px 0;
-  h3  {
+  h5  {
     display: inline-block;
   }
   &:first-child {
