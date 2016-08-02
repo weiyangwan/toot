@@ -4,10 +4,16 @@ static/home
 - homeSubheader
 - homeBtn
 
-
 users/show
 - username - for username on profile page
 - userposts - for each post in user profile page
+
+users/show_follow
+- users
+- follow
+
+users/follow_form
+- follow_form - id
 
 
 posts/post
@@ -21,6 +27,8 @@ posts/post_form
 - newContent
 - tootBtn
 
-partials/stats
+users/stats
 - stats
 - stat
+- following - id
+- follower - id
