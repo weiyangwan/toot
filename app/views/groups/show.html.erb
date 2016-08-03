@@ -1,3 +1,16 @@
-<h1>this is a group show page</h1>
+<div class="container col-md-8 col-md-offset-2">
 
-<%= render 'posts/post_form' %>
+  <h1><%= @group.name %></h1>
+
+  <%= render 'posts/post_form' %>
+
+  <div class="row">
+    <% if @user.posts.any? %>
+      <ol class="userPosts">
+        <%= render 'posts/post' %>
+      </ol>
+    <% end %>
+    <%= will_paginate @posts %>
+  </div>
+
+</div>
