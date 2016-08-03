@@ -1,13 +1,21 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!
+
+  def show
+    @group = Group.find(params[:id])
+    @post  = current_user.posts.build
+    @user = current_user
+  end
 
   def create
-    @group = current_user.groups.build(group_params)
+    @group = current_user.groups.create(group_params)
     if @group.save
       flash[:success] = "You have created a new group. Add your friends to start a conversation!"
-      #need to redirect to group/Url
+      redirect_to group_path(@group.id)
     else
       flash[:danger] = "Something went wrong when creating a group. Please try again."
       redirect_to user_path(current_user)
+    end
   end
 
   private

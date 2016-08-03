@@ -5,7 +5,8 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "Your post is created successfully!"
-      redirect_to user_path(current_user)
+      redirect_to root_url
+      #redirect to the same page
     else
       render 'static_pages/home'
     end
