@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts.paginate(page: params[:page])
     @post = @user.posts.build
+    @group = @user.groups.build
   end
 
   def following
