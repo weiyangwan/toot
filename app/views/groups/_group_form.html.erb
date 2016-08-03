@@ -1,0 +1,6 @@
+<%= simple_form_for @group do |f| %>
+  <div class="field newGroup">
+    <%= f.input :name, required:true, autofocus:true %>
+    <%= f.submit "Create Group", class:"btn btn-primary submitGroup" %>
+  </div>
+<% end %>

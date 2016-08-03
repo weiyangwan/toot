@@ -40,3 +40,8 @@ posts/post_form
 - newContentDiv
 - newContent
 - tootBtn
+
+
+group/group_form
+- newGroup
+- submitGroup
