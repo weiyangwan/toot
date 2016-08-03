@@ -1,0 +1,9 @@
+<li id="post-<%= @post.id %>">
+  <span class="postuser"><%= link_to @post.user.username.upcase, @post.user %></span>
+  <span class="content"><%= @post.content %></span>
+  <% unless @post.created_at.nil? %>
+    <span class="timestamp">
+      Tooted <%= time_ago_in_words(@post.created_at) %> ago.
+    </span>
+  <% end %>
+</li>

@@ -41,7 +41,9 @@ posts/post_form
 - newContent
 - tootBtn
 
-
 group/group_form
 - newGroup
 - submitGroup
+
+group/show
+- groupPosts
