@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @post  = current_user.posts.build
+    @post  = @group.users.where(:user_id == current_user.id).posts.build
     @user = current_user
   end
 

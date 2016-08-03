@@ -31,11 +31,6 @@ User.create!([
               password_confirmation: password)
 end
 
-users = User.all
-10.times do
-  content = Faker::Lorem.sentence(5)
-  users.each { |user| user.posts.create!(content: content)}
-end
 
 users = User.all
 user  = users.first
