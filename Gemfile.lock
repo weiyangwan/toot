@@ -164,6 +164,8 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (3.0.1)
+      execjs (>= 0.3.0, < 3)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (3.3.1)
@@ -201,6 +203,7 @@ DEPENDENCIES
   sqlite3
   turbolinks (~> 5)
   tzinfo-data
+  uglifier
   web-console
   will_paginate
 
