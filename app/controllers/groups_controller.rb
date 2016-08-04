@@ -6,8 +6,8 @@ class GroupsController < ApplicationController
     @user = current_user
     session[:group_id] = params[:id]
     #need to change user to those who belongs to group
-    @post  = @group.users.find(current_user.id).posts.build
-    @posts = @group.posts.where(:group_id => params[:id])
+    @post = @group.users.find(current_user.id).posts.build
+    @posts = @group.posts.where(:group_id => params[:id]).paginate(page: params[:page])
   end
 
   def create

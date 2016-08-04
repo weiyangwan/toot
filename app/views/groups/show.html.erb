@@ -9,10 +9,10 @@
   <div class="row">
     <% if @group.posts.any? %>
       <ol class="groupPosts">
-        <%= render 'groups/group_post' %>
+        <%= render partial: "groups/group_post", collection: @posts %>
       </ol>
     <% end %>
-    <%#= will_paginate @posts %>
+    <%= will_paginate @posts %>
   </div>
 
 </div>
