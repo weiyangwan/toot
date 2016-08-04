@@ -2,7 +2,6 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!
 
   def show
-
     @group = Group.find(params[:id])
     @user = current_user
   #  puts current_user

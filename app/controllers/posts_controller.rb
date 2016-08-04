@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     if @post.save
       flash[:success] = "Your post is created successfully!"
       session.delete(:group_id)
-      redirect_to root_url
+      redirect_to request.referrer
       #redirect to the same page
     else
       render 'static_pages/home'
