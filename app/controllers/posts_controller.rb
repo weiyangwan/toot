@@ -2,7 +2,10 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def create
+
+
     @post = current_user.posts.build(post_params)
+    @post.group_id = 0
     if @post.save
       flash[:success] = "Your post is created successfully!"
       redirect_to root_url

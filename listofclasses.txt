@@ -45,3 +45,6 @@ posts/post_form
 group/group_form
 - newGroup
 - submitGroup
+
+footer
+- copy

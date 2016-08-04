@@ -265,9 +265,15 @@ ul.users  {
   Footer
 ***************/
 footer  {
+  padding-top: 10px;
+  padding-bottom: 20px;
   border-top: 2px solid $primaryBrandColor;
 }
 
 footer li {
   display: inline-block;
+}
+
+footer a {
+  margin-left: 10px;
 }

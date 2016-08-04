@@ -3,9 +3,11 @@
 
 <div class="container col-md-8">
 
-  <div class="row">
-    <%= render "posts/post_form" %>
-  </div>
+  <% if @user.id != current_user.id %>
+    <div class="row">
+      <%= render "posts/post_form" %>
+    </div>
+  <% end %>
 
   <div class="row">
     <% if @user.posts.any? %>

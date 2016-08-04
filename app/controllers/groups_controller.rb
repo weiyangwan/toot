@@ -3,8 +3,9 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @post  = @group.users.where(:user_id == current_user.id).posts.build
+    @post  = @group.users.where(:id => current_user.id).posts.build
     @user = current_user
+    #need to change user to those who belongs to group
   end
 
   def create
@@ -13,7 +14,7 @@ class GroupsController < ApplicationController
       flash[:success] = "You have created a new group. Add your friends to start a conversation!"
       redirect_to group_path(@group.id)
     else
-      flash[:danger] = "Something went wrong when creating a group. Please try again."
+      flash[:danger] = "Group creation was not successful. Please try again."
       redirect_to user_path(current_user)
     end
   end

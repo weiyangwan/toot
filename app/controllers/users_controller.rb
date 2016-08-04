@@ -3,6 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    puts @user.id
+    puts current_user.id
     @posts = @user.posts.paginate(page: params[:page])
     @post = @user.posts.build
     @group = @user.groups.build
