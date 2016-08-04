@@ -2,10 +2,13 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!
 
   def show
+
     @group = Group.find(params[:id])
     @user = current_user
-    puts current_user
-    puts current_user.id
+  #  puts current_user
+#    puts current_user.id
+    session[:group_id] = params[:id]
+    puts  session[:group_id]
     #need to change user to those who belongs to group
     @post  = @group.users.find(current_user.id).posts.build
 

@@ -5,9 +5,9 @@
   <%= render 'posts/post_form' %>
 
   <div class="row">
-    <% if @user.posts.any? %>
+    <% if @group.posts.any? %>
       <ol class="userPosts">
-        <%#= render 'posts/post' %>
+        <%= render 'groups/group_post' %>
       </ol>
     <% end %>
     <%#= will_paginate @posts %>

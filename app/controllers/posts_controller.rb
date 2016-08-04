@@ -2,12 +2,18 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-
-
+    @post = Post.new
     @post = current_user.posts.build(post_params)
-    @post.group_id = 0
+
+    if session[:group_id].to_i > 1
+      @post.group_id = session[:group_id]
+    else
+      @post.group_id = 0
+    end
+
     if @post.save
       flash[:success] = "Your post is created successfully!"
+      session.delete(:group_id)
       redirect_to root_url
       #redirect to the same page
     else
