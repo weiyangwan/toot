@@ -7,7 +7,7 @@ class GroupsController < ApplicationController
     puts current_user
     puts current_user.id
     #need to change user to those who belongs to group
-    @post  = @group.users.where(:user_id == current_user.id).posts.build
+    @post  = @group.users.find(current_user.id).posts.build
 
   end
 
