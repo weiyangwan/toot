@@ -44,10 +44,12 @@ posts/post_form
 - newContent
 - tootBtn
 
-
-group/group_form
+groups/group_form
 - newGroup
 - submitGroup
+
+groups/show
+- groupPost
 
 footer
 - copy

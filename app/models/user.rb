@@ -32,7 +32,8 @@ class User < ApplicationRecord
     following_ids = "SELECT followed_id FROM relationships
                      WHERE  follower_id = :user_id"
     Post.where("user_id IN (#{following_ids})
-                     OR user_id = :user_id", user_id: id)
+                     OR user_id = :user_id
+                     AND group_id = 0", user_id: id)
   end
 
   # Include default devise modules. Others available are:
