@@ -3,9 +3,12 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @post  = @group.users.where(:id => current_user.id).posts.build
     @user = current_user
+    puts current_user
+    puts current_user.id
     #need to change user to those who belongs to group
+    @post  = @group.users.where(:user_id == current_user.id).posts.build
+
   end
 
   def create

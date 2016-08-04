@@ -7,10 +7,10 @@
   <div class="row">
     <% if @user.posts.any? %>
       <ol class="userPosts">
-        <%= render 'posts/post' %>
+        <%#= render 'posts/post' %>
       </ol>
     <% end %>
-    <%= will_paginate @posts %>
+    <%#= will_paginate @posts %>
   </div>
 
 </div>

@@ -4,6 +4,9 @@ static/home
 - homeSubheader
 - homeBtn
 
+users/index
+- user-list
+
 users/show
 - username - for username on profile page
 - userposts - for each post in user profile page
