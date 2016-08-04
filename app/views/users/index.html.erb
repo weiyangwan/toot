@@ -1,0 +1,13 @@
+
+<div class="container col-md-10 col-md-offset-1">
+  <h1>Find a Friend</h1>
+  <ul>
+    <% @users.each do |user| %>
+      <% if user.id != current_user.id %>
+        <li class="user-list">
+          <%= link_to user.username, user %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

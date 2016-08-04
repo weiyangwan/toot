@@ -20,6 +20,7 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'uglifier'
+gem 'rails-erd'
 
 group :development, :test do
   gem 'byebug', platform: :mri

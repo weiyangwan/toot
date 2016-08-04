@@ -1,0 +1,10 @@
+<li id="post-<%= group_post.id %>">
+  <span class="postuser"><%= link_to group_post.user.username.upcase, group_post.user %></span>
+  <span class="content"><%= group_post.content %></span>
+
+  <% unless group_post.created_at.nil? %>
+    <span class="timestamp">
+      Tooted <%= time_ago_in_words(group_post.created_at) %> ago.
+    </span>
+  <% end %>
+</li>

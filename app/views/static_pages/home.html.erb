@@ -1,5 +1,4 @@
 
-
 <%= render 'users/left_nav' %>
 
 <% if user_signed_in? %>
@@ -25,8 +24,10 @@
 
 
       <div class="container col-md-4">
-        <li><%= link_to "Be a Tooter | Sign Up Now", new_user_registration_path, class: "btn btn-primary homeBtn" %></li>
-        <li><%= link_to "Log In", new_user_session_path, class: "btn btn-primary homeBtn" %></li>
+        <ul class="listHomeBtn">
+          <li><%= link_to "Be a Tooter | Sign Up Now", new_user_registration_path, class: "btn btn-primary homeBtn" %></li>
+          <li><%= link_to "Log In", new_user_session_path, class: "btn btn-primary homeBtn" %></li>
+        </ul>
       </div>
 
     </div>

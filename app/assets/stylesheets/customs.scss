@@ -70,6 +70,10 @@ h1,h2  {
   color: $primaryBrandColor;
 }
 
+.listHomeBtn  {
+  list-style-type: none;
+}
+
 .homeBtn  {
   display: block;
   padding-top: 10px;
@@ -77,7 +81,6 @@ h1,h2  {
   margin-top: 15px;
   height: 50px;
   width: 350px;
-  list-style: none;
   font-size: 1.5em;
   font-weight: bold;
   color: white;
@@ -150,6 +153,23 @@ h1,h2  {
 }
 
 /******************
+ User Index
+******************/
+.user-list  {
+  display: inline-block;
+  width: 400px;
+  margin-bottom: 10px;
+  padding: 15px 0 10px 10px;
+  height: 80px;
+  font-size: 1.2em;
+  list-style: none;
+  @include box;
+  p {
+    font-size: 0.8em;
+    color: grey;
+  }
+}
+/******************
  User Profile Page
 ******************/
 /* new content */
@@ -182,7 +202,8 @@ textarea  {
 
 /* posts */
 .userPosts,
-.feedPosts  {
+.feedPosts,
+.groupPosts  {
   list-style: none;
   padding: 0;
   li  {
@@ -262,9 +283,16 @@ ul.users  {
   Footer
 ***************/
 footer  {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: white;
   border-top: 2px solid $primaryBrandColor;
 }
 
 footer li {
   display: inline-block;
+}
+
+footer a {
+  margin-left: 10px;
 }

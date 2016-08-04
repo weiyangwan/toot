@@ -1,0 +1,18 @@
+<%#= render 'users/left_nav' %>
+
+<div class="container col-md-8 col-md-offset-2">
+
+  <h1><%= @group.name %></h1>
+
+  <%= render 'posts/post_form' %>
+
+  <div class="row">
+    <% if @group.posts.any? %>
+      <ol class="groupPosts">
+        <%= render partial: "groups/group_post", collection: @posts %>
+      </ol>
+    <% end %>
+    <%= will_paginate @posts %>
+  </div>
+
+</div>

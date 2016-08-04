@@ -3,16 +3,31 @@
   <div class="row">
     <% unless current_user?(@user) %>
       <%= link_to "My Profile", user_path(current_user), class: "my-profile" %>
+    <% else %>
+      <%= link_to "Back to Home", root_path, class: "my-profile" %>
     <% end %>
   </div>
 
-  <div class="row">
-    <% if user_signed_in? %>
+  <% if user_signed_in? %>
+    <div class="row">
       <%= render 'users/stats' %>
-    <% end %>
-  </div>
+    </div>
 
-  <div class="row">
-    <%= render 'users/follow_form' if user_signed_in? %>
-  </div>
+    <div class="row">
+      <%= render 'users/follow_form' %>
+    </div>
+
+    <div class="row">
+      <%= link_to "Find a tooter", users_path %>
+    </div>
+
+    <% if current_user.id == @user.id %>
+      <div class="row">
+        <%= render 'groups/group_form' %>
+      </div>
+
+      <div class="row">
+      </div>
+    <% end %>
+  <% end %>
 </div>

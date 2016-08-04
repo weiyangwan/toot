@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TooT is a social platform that facilitates travel conversation twitter style.
 
-Things you may want to cover:
+TooT is developed with 4 models:
+- User
+- Post
+- Relationship (follower/following)
+- Group
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Frameworks and gems utilised to develop the site:
+- Bootstrap/Sass
+- Devise gem
