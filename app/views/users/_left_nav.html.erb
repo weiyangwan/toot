@@ -17,9 +17,16 @@
       <%= render 'users/follow_form' %>
     </div>
 
+    <div class="row">
+      <%= link_to "Find a tooter", users_path %>
+    </div>
+
     <% if current_user.id == @user.id %>
       <div class="row">
         <%= render 'groups/group_form' %>
+      </div>
+
+      <div class="row">
       </div>
     <% end %>
   <% end %>
